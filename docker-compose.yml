@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  loader:
+    container_name: "loader"
+    build:
+      context: ./
+      dockerfile: loader/Dockerfile
+    command: python loader.py
+    network_mode: "host"
+    volumes:
+      - .:/code
