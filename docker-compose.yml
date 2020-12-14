@@ -1,11 +1,9 @@
-version: "3.8"
+version: "3.9"
 services:
   loader:
     container_name: "loader"
     build:
-      context: ./
+      context: .
       dockerfile: loader/Dockerfile
     command: python loader.py
     network_mode: "host"
-    volumes:
-      - .:/code
